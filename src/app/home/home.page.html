@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="top">
+  <div class="ion-padding">
+    <!--Question-->
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col size="12">
+          <div class="ion-text-center">
+            <ion-text>
+              <h1 class="tone-text">{{tone_text}}</h1>
+            </ion-text>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-center>
+        <ion-col size="12">
+          <div class="ion-text-center">
+            <ion-text >
+              <h1 class="tone-text">TONALIDAD: {{scale_text}}</h1>
+            </ion-text>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+<ion-content>
+  <!--Buttons-->
+  <ion-grid>
+    <ion-row align-items-center>
+      <ion-col *ngFor="let grade of grades" size="1.7" size-sm>
+        <ion-button size="small" expand="block" (click)="evaluateAnswer(grade)">
+          <ion-ripple-effect></ion-ripple-effect>
+          {{grade}}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
